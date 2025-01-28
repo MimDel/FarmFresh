@@ -23,6 +23,7 @@ public record OrderDetailsViewModel(
     string Origin,
     string FarmerName,
     decimal ProductPrice,
+    bool IsPaymentSuccess,
     string ShipmentNumber,
     Seasons Seasons,
     DateTime HarvestDate,

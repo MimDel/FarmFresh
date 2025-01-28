@@ -44,6 +44,7 @@ public class OrderMappingProfile : Profile
             .ForCtorParam("Origin", opt => opt.MapFrom(src => src.Product.Origin))
             .ForCtorParam("FarmerName", opt => opt.MapFrom(src => src.Product.Farmer.User.FirstName + " " + src.Product.Farmer.User.LastName))
             .ForCtorParam("ProductPrice", opt => opt.MapFrom(src => src.Product.Price))
+            .ForCtorParam("IsPaymentSuccess",opt => opt.MapFrom(src=>src.Order.IsPaymentSuccsess))
             .ForCtorParam("ShipmentNumber", opt => opt.MapFrom(src => src.Order.ShipmentNumber))
             .ForCtorParam("Seasons", opt => opt.MapFrom(src => src.Product.SuitableSeason))
             .ForCtorParam("HarvestDate", opt => opt.MapFrom(src => src.Product.HarvestDate))

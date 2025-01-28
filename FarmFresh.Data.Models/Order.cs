@@ -46,6 +46,8 @@ public class Order : Entity_1<Guid>
 
     public PaymentOption? PaymentOption { get; set; }
 
+    public bool IsPaymentSuccsess { get; set; }
+
     public decimal TotalPrice { get; set; }
 
     public bool IsTaken { get; set; }

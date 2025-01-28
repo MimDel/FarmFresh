@@ -27,7 +27,7 @@ public abstract record FarmerForManipulationDto
 
     [Required]
     [Display(Name = "Please enter your valid egn!")]
-    [EgnValidator]
+    //[EgnValidator]
     public string Egn { get; init; } = string.Empty;
 
     [Required]

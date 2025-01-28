@@ -240,6 +240,7 @@ public sealed class OrderManagmentService : IOrderManagmentService
         var labelResponse = await _econtManagmentService.CreateLabel(order, true);
 
         order.OrderStatus = OrderStatus.Completed;
+        order.IsPaymentSuccsess = true;
         order.PaymentOption = paymentOption;
 
         _repositoryManager.OrderRepository.UpdateOrder(order);

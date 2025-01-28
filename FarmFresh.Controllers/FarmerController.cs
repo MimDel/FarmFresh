@@ -48,10 +48,10 @@ public class FarmerController : BaseController
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
+        //if (!ModelState.IsValid)
+        //{
+        //    return View(model);
+        //}
 
         await _serviceManager.FarmerService.CreateFarmerAsync(model, userId, trackChanges: true);
         TempData[SuccessMessage] = SuccessfullyBecomeAFarmer;

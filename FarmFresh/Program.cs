@@ -1,6 +1,8 @@
+using FarmFresh.Data;
 using FarmFresh.Extensions;
 using FarmFresh.Infrastructure.Extensions;
 using FarmFresh.Mapper;
+using FarmFresh.Services.Contacts;
 using LoggerService.Contacts;
 using Microsoft.AspNetCore.Identity;
 using NLog;
@@ -92,7 +94,7 @@ app.MapRazorPages();
 //using(var scope = app.Services.CreateScope())
 //{
 //    var serviceManager = scope.ServiceProvider.GetRequiredService<IServiceManager>();
-
+//
 //    await DBTransactionHelper.ExecuteTransactionAsync(scope.ServiceProvider, async () =>
 //    {
 //        var countryService = serviceManager.CountryService;
